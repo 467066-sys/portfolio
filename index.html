@@ -50,7 +50,125 @@
 
 </nav>
 
-  <script src="script.js"></script>
+  </header>
+
+<section class="showcase">
+
+    <h2>ผลงานเด่น</h2>
+
+    <div class="showcase-slider">
+
+        <img src="assets/Add1.png" alt="ผลงาน 1">
+
+        <img src="assets/Add2.png" alt="ผลงาน 2">
+
+        <img src="assets/Add3.png" alt="ผลงาน 3">
+
+        <img src="assets/Add4.png" alt="ผลงาน 4">
+
+        <img src="assets/Add5.png" alt="ผลงาน 5">
+
+        <img src="assets/Add6.png" alt="ผลงาน 6">
+
+        <img src="assets/Add7.png" alt="ผลงาน 7">
+
+    </div>
+
+</section>
+
+<style>
+
+.showcase {
+
+    margin-top: 80px;
+
+    padding: 40px;
+
+}
+
+.showcase h2 {
+
+    text-align: center;
+
+    font-size: 42px;
+
+    margin-bottom: 30px;
+
+}
+
+.showcase-slider {
+
+    display: flex;
+
+    gap: 20px;
+
+    overflow-x: auto;
+
+    scroll-behavior: smooth;
+
+    padding-bottom: 10px;
+
+}
+
+.showcase-slider::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+.showcase-slider img {
+
+    width: 400px;
+
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    flex-shrink: 0;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+
+    transition: 0.3s;
+
+}
+
+.showcase-slider img:hover {
+
+    transform: scale(1.03);
+
+}
+
+</style>
+
+<script>
+
+const slider = document.querySelector(".showcase-slider");
+
+let scrollAmount = 0;
+
+setInterval(() => {
+
+    scrollAmount += 420;
+
+    if (scrollAmount >= slider.scrollWidth - slider.clientWidth) {
+
+        scrollAmount = 0;
+
+    }
+
+    slider.scrollTo({
+
+        left: scrollAmount,
+
+        behavior: "smooth"
+
+    });
+
+}, 2500);
+
+</script>
 
 </body>
 

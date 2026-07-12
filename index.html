@@ -52,123 +52,172 @@
 
   </header>
 
-<section class="showcase">
+<!DOCTYPE html>
+<html lang="th">
 
-    <h2>ผลงานเด่น</h2>
+<head>
 
-    <div class="showcase-slider">
+    <meta charset="UTF-8">
 
-        <img src="assets/Add1.png" alt="ผลงาน 1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <img src="assets/Add2.png" alt="ผลงาน 2">
+    <title>Portfolio | พุฒิพงศ์ พุ่มเจริญ</title>
 
-        <img src="assets/Add3.png" alt="ผลงาน 3">
+    <link rel="stylesheet" href="style.css">
 
-        <img src="assets/Add4.png" alt="ผลงาน 4">
+</head>
 
-        <img src="assets/Add5.png" alt="ผลงาน 5">
+<body>
 
-        <img src="assets/Add6.png" alt="ผลงาน 6">
+    <header>
 
-        <img src="assets/Add7.png" alt="ผลงาน 7">
+        <div class="left">
 
-    </div>
+            <h1>PORTFOLIO</h1>
 
-</section>
+            <h2>แฟ้มสะสมผลงาน</h2>
 
-<style>
+            <h3>นายพุฒิพงศ์ พุ่มเจริญ</h3>
 
-.showcase {
+            <p>โรงเรียนกระทุ่มแบน "วิเศษสมุทคุณ"</p>
 
-    margin-top: 80px;
+        </div>
 
-    padding: 40px;
+        <div class="right">
 
-}
+            <img src="profile.png" alt="Profile">
 
-.showcase h2 {
+        </div>
 
-    text-align: center;
+    </header>
 
-    font-size: 42px;
+    <nav>
 
-    margin-bottom: 30px;
+        <a href="index.html">Home</a>
 
-}
+        <a href="sop.html">SOP</a>
 
-.showcase-slider {
+        <a href="whoiam.html">Who I am</a>
 
-    display: flex;
+        <a href="#">Activities</a>
 
-    gap: 20px;
+        <a href="#">Certificates</a>
 
-    overflow-x: auto;
+        <a href="#">Contact</a>
 
-    scroll-behavior: smooth;
+    </nav>
 
-    padding-bottom: 10px;
+    <section class="showcase">
 
-}
+        <h2>ผลงานเด่น</h2>
 
-.showcase-slider::-webkit-scrollbar {
+        <div class="slider-container">
 
-    display: none;
+            <div class="showcase-slider">
 
-}
+                <img src="assets/Add1.png" alt="">
+                <img src="assets/Add2.png" alt="">
+                <img src="assets/Add3.png" alt="">
+                <img src="assets/Add4.png" alt="">
+                <img src="assets/Add5.png" alt="">
+                <img src="assets/Add6.png" alt="">
+                <img src="assets/Add7.png" alt="">
 
-.showcase-slider img {
+                <img src="assets/Add1.png" alt="">
+                <img src="assets/Add2.png" alt="">
+                <img src="assets/Add3.png" alt="">
+                <img src="assets/Add4.png" alt="">
+                <img src="assets/Add5.png" alt="">
+                <img src="assets/Add6.png" alt="">
+                <img src="assets/Add7.png" alt="">
 
-    width: 400px;
+            </div>
 
-    height: 250px;
+        </div>
 
-    object-fit: cover;
+    </section>
 
-    border-radius: 25px;
+    <style>
 
-    flex-shrink: 0;
+        .showcase {
 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+            margin-top: 80px;
 
-    transition: 0.3s;
+            padding: 40px;
 
-}
+            overflow: hidden;
 
-.showcase-slider img:hover {
+        }
 
-    transform: scale(1.03);
+        .showcase h2 {
 
-}
+            text-align: center;
 
-</style>
+            font-size: 42px;
 
-<script>
+            margin-bottom: 30px;
 
-const slider = document.querySelector(".showcase-slider");
+        }
 
-let scrollAmount = 0;
+        .slider-container {
 
-setInterval(() => {
+            width: 100%;
 
-    scrollAmount += 420;
+            overflow: hidden;
 
-    if (scrollAmount >= slider.scrollWidth - slider.clientWidth) {
+        }
 
-        scrollAmount = 0;
+        .showcase-slider {
 
-    }
+            display: flex;
 
-    slider.scrollTo({
+            gap: 20px;
 
-        left: scrollAmount,
+            width: max-content;
 
-        behavior: "smooth"
+        }
 
-    });
+        .showcase-slider img {
 
-}, 2500);
+            width: 400px;
 
-</script>
+            height: 250px;
+
+            object-fit: cover;
+
+            border-radius: 25px;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+        }
+
+    </style>
+
+    <script>
+
+        const slider = document.querySelector(".showcase-slider");
+
+        let position = 0;
+
+        function moveSlider() {
+
+            position += 1;
+
+            slider.style.transform = `translateX(-${position}px)`;
+
+            if (position >= slider.scrollWidth / 2) {
+
+                position = 0;
+
+            }
+
+            requestAnimationFrame(moveSlider);
+
+        }
+
+        moveSlider();
+
+    </script>
 
 </body>
 

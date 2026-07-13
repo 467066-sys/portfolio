@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ผลงานในโรงเรียน</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        body {
+            background: #f3f5ff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 50px;
+            margin-bottom: 40px;
+        }
+
+        .gallery {
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 25px;
+
+        }
+
+        .card {
+
+            background: white;
+
+            border-radius: 25px;
+
+            overflow: hidden;
+
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+            transition: 0.3s;
+
+        }
+
+        .card:hover {
+
+            transform: translateY(-8px);
+
+        }
+
+        .card img {
+
+            width: 100%;
+
+            height: 220px;
+
+            object-fit: cover;
+
+        }
+
+        .card p {
+
+            padding: 15px;
+
+            text-align: center;
+
+        }
+
+        .pagination {
+
+            margin-top: 40px;
+
+            text-align: center;
+
+        }
+
+        .pagination button {
+
+            padding: 12px 24px;
+
+            border: none;
+
+            border-radius: 15px;
+
+            margin: 10px;
+
+            cursor: pointer;
+
+        }
+
+        .back {
+
+            display: inline-block;
+
+            margin-top: 20px;
+
+            text-decoration: none;
+
+        }
+
+        @media (max-width: 900px) {
+
+            .gallery {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>ผลงานในโรงเรียน</h1>
+
+    <div class="gallery">
+
+        <div class="card">
+            <img src="assets/Add1.png">
+            <p>ผลงานชิ้นที่ 1</p>
+        </div>
+
+        <div class="card">
+            <img src="assets/Add2.png">
+            <p>ผลงานชิ้นที่ 2</p>
+        </div>
+
+        <div class="card">
+            <img src="assets/Add3.png">
+            <p>ผลงานชิ้นที่ 3</p>
+        </div>
+
+        <div class="card">
+            <img src="assets/Add4.png">
+            <p>ผลงานชิ้นที่ 4</p>
+        </div>
+
+        <div class="card">
+            <img src="assets/Add5.png">
+            <p>ผลงานชิ้นที่ 5</p>
+        </div>
+
+        <div class="card">
+            <img src="assets/Add6.png">
+            <p>ผลงานชิ้นที่ 6</p>
+        </div>
+
+        <div class="card">
+            <img src="assets/Add7.png">
+            <p>ผลงานชิ้นที่ 7</p>
+        </div>
+
+        <div class="card">
+            <img src="assets/Add1.png">
+            <p>ผลงานชิ้นที่ 8</p>
+        </div>
+
+    </div>
+
+    <div class="pagination">
+
+        <button>◀ ก่อนหน้า</button>
+
+        <button>ถัดไป ▶</button>
+
+    </div>
+
+    <div style="text-align:center;">
+
+        <a class="back" href="index.html">← กลับหน้าแรก</a>
+
+    </div>
+
+</body>
+
+</html>
